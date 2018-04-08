@@ -1,0 +1,351 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000f"
+    tools:context="mhd.com.btcsmartsteward.Fragment.ParentFirstFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00001f"
+        android:orientation="vertical">
+<!--
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_alignParentTop="true" />
+
+-->
+        <TextView
+            android:id="@+id/tv_currentprice_huge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="30sp"
+            android:text="Loading"
+            android:textStyle="bold"
+            android:textColor="#ff0101"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_tradepair"
+            android:text="BTC/USDT"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_updownrate"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:id="@+id/tv_updownrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#ff0101"
+            android:text="+0.00%"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/tv_currentprice_huge"
+            />
+        <LinearLayout
+            android:id="@+id/ll_24h"
+            android:layout_marginTop="5dp"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/tv_currentprice_huge"
+            android:background="#A55920"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            >
+            <TextView
+                android:id="@+id/tv_tag_24h"
+                android:layout_gravity="center_horizontal"
+                android:text="24小时统计"
+                android:textSize="13sp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TableLayout
+                android:id="@+id/tl_24hinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/tv_tag_24h"
+                android:layout_toRightOf="@id/tv_currentprice_huge"
+                >
+                <TableRow>
+                    <TextView
+                        android:id="@+id/tf_open_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="开盘价:"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_open"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:text="刷新中"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_amount_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="成易量:"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_amount"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="刷新中"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/tf_high_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="最高价:"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_high"
+                        android:layout_height="wrap_content"
+                        android:text="刷新中"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_vol_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="成交额:"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_vol"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="刷新中"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/tf_low_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="最低价:"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_low"
+                        android:layout_height="wrap_content"
+                        android:text="刷新中"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/tf_count_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="成交数:"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                    <TextView
+                        android:id="@+id/tf_count"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="刷新中"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+        <com.guoziwei.klinelib.chart.KLineView
+            android:id="@+id/kline_chart"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ll_24h"
+            />
+
+        <TableLayout
+            android:id="@+id/tv_newest_trade"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/kline_chart"
+            android:orientation="horizontal">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/trade_price_tag"
+                    android:layout_width="90dp"
+                    android:gravity="center_horizontal"
+                    android:text="最新成交价"
+                    android:textColor="#fffffc"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/trade_amount_tag"
+                    android:layout_width="90dp"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="交易量"
+                    android:textColor="#fffffc"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/trade_text"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="刷新中"
+                    android:textColor="#ff0101"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/trade_amount_text"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="刷新中"
+                    android:textColor="#19b5fe"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/trade_time_tag"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="成交时间"
+                    android:textColor="#fffffc"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/trade_type_tag"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="交易类型"
+                    android:textColor="#fffffc"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/trade_time_text"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="刷新中"
+                    android:textColor="#19b5fe"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/trade_type_text"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="刷新中"
+                    android:textColor="#19b5fe"
+                    android:textSize="14sp" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="2dp"
+                    android:layout_width="match_parent"
+                    />
+            </TableRow>
+        </TableLayout>
+        <RadioGroup
+            android:id="@+id/rg_index"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:layout_toEndOf="@id/tv_newest_trade"
+            android:layout_below="@id/kline_chart"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="50dp"
+            android:background="#A4B2EA"
+            android:paddingLeft="5dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/cb_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成交量"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/cb_macd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="MACD" />
+
+            <RadioButton
+                android:id="@+id/cb_kdj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="KDJ" />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/rg_kltype"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:background="#A4B2EA"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/kline_chart"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/cb_dayline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="日线"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/cb_minline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="分钟线" />
+
+        </RadioGroup>
+</RelativeLayout>
+
+    </FrameLayout>

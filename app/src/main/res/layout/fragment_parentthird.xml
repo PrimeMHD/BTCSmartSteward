@@ -1,0 +1,206 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mhd.com.btcsmartsteward.Fragment.ParentThirdFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#feffffff">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myasset_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="持币估值"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/myasset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/myasset_tag"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/myasset_tag"
+                android:text="Loading"
+                android:textColor="@color/increasing_color"
+                android:textSize="37sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/btc_in_hand_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/myasset_tag"
+                android:layout_below="@+id/myasset_tag"
+                android:layout_marginTop="30dp"
+                android:text="持币数"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btc_in_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/btc_in_hand_tag"
+                android:layout_alignBottom="@+id/btc_in_hand_tag"
+                android:layout_marginStart="50dp"
+                android:layout_toEndOf="@+id/btc_in_hand_tag"
+                android:gravity="center"
+                android:text="loading"
+                android:textColor="#141419"
+                android:textSize="37sp" />
+
+            <Button
+                android:id="@+id/btn_setbtc_inhand"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/btc_in_hand"
+                android:layout_marginEnd="10dp"
+                android:background="#427DDB"
+                android:onClick="onSetBtnTouched"
+                android:text="设置资产"
+                android:textColor="#ffffff" />
+            <!--android:textColor="#E4F1FE"-->
+            <!--
+                    <View
+                        android:layout_width="match_parent"
+                        android:id="@+id/line0_1"
+                        android:layout_height="3dp"
+                        android:layout_below="@id/btn_setbtc_inhand"
+                        android:background="#fe000000"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_middle"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/rl_top"
+            android:layout_marginTop="10dp"
+            android:background="#E1E6F4">
+
+            <TextView
+                android:id="@+id/inspect_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="价格区间监测"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/inspect_tag1"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/inspect_tag1"
+                android:switchMinWidth="50dip"
+                android:textOff="Off"
+                android:textOn="On"
+                android:theme="@style/mySwitch"
+                android:thumbTextPadding="15dip" />
+
+            <TextView
+                android:id="@+id/inspect1_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/switch1"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/switch1"
+                android:text="No Settings" />
+
+            <TextView
+                android:id="@+id/inspect_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/inspect_tag1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="跟踪抄底提醒"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/inspect_tag2"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/inspect_tag2"
+                android:theme="@style/mySwitch" />
+
+            <TextView
+                android:id="@+id/inspect2_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/switch2"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/switch2"
+                android:text="No Settings" />
+
+            <TextView
+                android:id="@+id/inspect_tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/inspect_tag2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="跟踪止盈提醒"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/inspect_tag3"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/inspect_tag3"
+                android:theme="@style/mySwitch" />
+
+            <TextView
+                android:id="@+id/inspect3_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/switch3"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/switch3"
+                android:text="No Settings" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/helperinfo"
+            android:layout_height="105dp"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            android:src="@drawable/zssysm" />
+    </RelativeLayout>
+
+
+</FrameLayout>

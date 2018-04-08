@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2C2C37</color>
+    <color name="colorPrimaryDark">#2C2C37</color>
+    <color name="colorAccent">#427DDB</color>
+    <color name="tab_unselect">#A7ADBC</color>
+
+    <color name="bg_yellow">#FFE100</color>
+    <color name="home_tab_bg">#262733</color>
+    <color name="home_tab_text">#194B70</color>
+    <color name="home_page_bg">#1E1E26</color>
+    <color name="transparent_black">#40000000</color>
+    <color name="transparent_black2">#80000000</color>
+    <color name="common_divider">#303341</color>
+    <color name="mine_label_txt">#A7ADBC</color>
+    <color name="dialog_avatar_bg">#262127</color>
+
+    <color name="btn_black_pressed_bg">#2E2C31</color>
+    <color name="edit_text_underline">#2F3241</color>
+    <color name="info_item_subtitle">#5F5D6A</color>
+
+    <color name="info_tab_select">#194B70</color>
+    <!--辅助文字色，用于稍微弱些的文字表现。info_tab_unselect改名为text_grey_light-->
+    <color name="text_grey_light">#A7ADBC</color>
+
+    <color name="marker_color">#be945c</color>
+    <color name="marker_text_color">#333333</color>
+    <color name="chart_grid_color">#333333</color>
+
+    <color name="ma5">#823E66</color>
+    <color name="ma10">#B99C7A</color>
+    <color name="ma20">#3C7193</color>
+    <color name="ma30">#7F9976</color>
+
+    <color name="increasing_color">@color/main_color_red</color>
+    <color name="increasing_color1">#ff0101</color>
+    <color name="decreasing_color">@color/main_color_green</color>
+    <color name="normal_line_color">#be945c</color>
+    <color name="ave_color">#bbbbbb</color>
+    <color name="axis_color">#ffffff</color>
+    <color name="chart_info_color">#88000000</color>
+    <color name="chart_no_data_color">#be945c</color>
+    <color name="highlight_color">#be945c</color>
+    <color name="limit_color">#adadad</color>
+    <color name="text_red">#FC0544</color>
+    <color name="text_green">#51FFB9</color>
+    <color name="text_grey">#5E5E6A</color>
+    <color name="text_blue">#118CDE</color>
+    <color name="text_orange">#FCAE05</color>
+
+    <color name="btn_blue">#118CDE</color>
+    <color name="btn_blue_pressed">#0070BB</color>
+    <color name="btn_grey_ripple">#545359</color>
+
+    <color name="label_etf_bg">#2C2C37</color>
+</resources>
